@@ -1,0 +1,21 @@
+mutation {
+  createRma(input: {rma_orders: { 
+                      order_id:"308"
+                      store_id:1
+                      type:"regular"
+                      items: {
+                        order_item_id: 463
+                        qty_requested: 1
+                        product_sku: "Test Headphones"
+                        condition_id:1
+                        reason_id: 3
+                        resolution_id: 1
+                      }
+                     }} ) {
+    rma {
+      date_requested
+      increment_id
+      status_id
+    }
+  }
+}
